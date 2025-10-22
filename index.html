@@ -3,17 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ScholarAIO</title>
+  <title>ScholarAIO MVP</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-white text-gray-800 font-sans">
 
   <div class="min-h-screen flex flex-col items-center justify-center text-center px-4">
-    <h1 class="text-4xl font-bold mb-4">🎓 Turn your academic profile into a smart personal website — powered by AI</h1>
-    <p class="text-lg mb-6">Just drop your CV, ORCID, or Google Scholar link. Let AI handle the rest.</p>
-    <a href="https://tally.so/r/3ErW6r" target="_blank" class="bg-indigo-600 text-white px-6 py-3 rounded hover:bg-indigo-700">
-      🚀 Join the Waitlist
-    </a>
+    <h1 class="text-4xl font-bold mb-4">🧑‍💼 Turn your CV/Resume/Scholar Profile into a Smart Website</h1>
+    <p class="text-lg mb-6">Upload your CV or provide a Google Scholar/ORCID link. Our AI will build a personal site for you.</p>
+
+    <form class="w-full max-w-md bg-gray-100 p-6 rounded-lg shadow-md">
+      <div class="mb-4">
+        <label class="block text-left font-medium mb-2" for="resume">Upload CV/Resume (PDF or DOCX)</label>
+        <input id="resume" type="file" accept=".pdf,.doc,.docx" class="w-full border border-gray-300 p-2 rounded">
+      </div>
+      <div class="text-center my-2 font-semibold">or</div>
+      <div class="mb-4">
+        <label class="block text-left font-medium mb-2" for="profile_link">Enter ORCID or Google Scholar link</label>
+        <input id="profile_link" type="url" placeholder="https://scholar.google.com/citations?user=XXXX" class="w-full border border-gray-300 p-2 rounded">
+      </div>
+      <button type="submit" class="w-full bg-indigo-600 text-white px-6 py-3 rounded hover:bg-indigo-700">Generate My Website</button>
+    </form>
+
     <p class="text-sm text-gray-500 mt-4">🔒 We respect your privacy. No spam, ever.</p>
   </div>
 
