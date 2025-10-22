@@ -12,15 +12,15 @@
     <h1 class="text-4xl font-bold mb-4">🧑‍💼 Turn your CV/Resume/Scholar Profile into a Smart Website</h1>
     <p class="text-lg mb-6">Upload your CV or provide a Google Scholar/ORCID link. Our AI will build a personal site for you.</p>
 
-    <form class="w-full max-w-md bg-gray-100 p-6 rounded-lg shadow-md">
+    <form action="/generate" method="post" enctype="multipart/form-data" class="w-full max-w-md bg-gray-100 p-6 rounded-lg shadow-md">
       <div class="mb-4">
         <label class="block text-left font-medium mb-2" for="resume">Upload CV/Resume (PDF or DOCX)</label>
-        <input id="resume" type="file" accept=".pdf,.doc,.docx" class="w-full border border-gray-300 p-2 rounded">
+        <input id="resume" name="file" type="file" accept=".pdf,.doc,.docx" class="w-full border border-gray-300 p-2 rounded">
       </div>
       <div class="text-center my-2 font-semibold">or</div>
       <div class="mb-4">
         <label class="block text-left font-medium mb-2" for="profile_link">Enter ORCID or Google Scholar link</label>
-        <input id="profile_link" type="url" placeholder="https://scholar.google.com/citations?user=XXXX" class="w-full border border-gray-300 p-2 rounded">
+        <input id="profile_link" name="link" type="url" placeholder="https://scholar.google.com/citations?user=XXXX" class="w-full border border-gray-300 p-2 rounded">
       </div>
       <button type="submit" class="w-full bg-indigo-600 text-white px-6 py-3 rounded hover:bg-indigo-700">Generate My Website</button>
     </form>
